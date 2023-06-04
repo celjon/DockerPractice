@@ -16,11 +16,13 @@
 
 ## проверяем работает ли?
 с помощью комнады:
-
+```shell
 $ docker run -v $PWD/mosquitto:/mosquitto/config -p 1883:1883 --name broker --rm eclipse-mosquitto
+```
 запускаем контейнер с брокером c помощью команды:
-
+```shell
 $ docker run -e SIM_HOST=192.168.0.114 -e SIM_TYPE=temperature --name temperature celjon/sensor-sim
+```
 и видим:
 
 ![image](https://github.com/celjon/DockerPractice/assets/134550766/f6352f1f-8058-4e7c-b8ce-88f68f34547b)
@@ -28,8 +30,9 @@ $ docker run -e SIM_HOST=192.168.0.114 -e SIM_TYPE=temperature --name temperatur
 все работает корректно
 # автоматизация
 немного редактируем конфиги виртуалок с предыдущего таска, запускаем плей вис докер и закачивем на каждую вм клон репрозитория с помощью команды
-
+```shell
 $ git clone -b develop https://github.com/celjon/DockerPractice.git
+```
 ## client
 запускам скрипт
 
